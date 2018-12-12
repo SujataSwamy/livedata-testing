@@ -1,1 +1,1 @@
-include ':testing', ':testing-ktx'
+include ':testing-ktx'

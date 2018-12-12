@@ -1,7 +1,6 @@
 package com.jraska.livedata.example;
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
-import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import com.jraska.livedata.TestLifecycle;
 import com.jraska.livedata.TestObserver;
@@ -87,7 +86,7 @@ public class ExampleJavaTest {
   @Test
   public void useObserverWithLifecycle() {
     TestObserver<Integer> testObserver = TestObserver.create();
-    TestLifecycle testLifecycle = TestLifecycle.initialized();
+    TestLifecycle testLifecycle = TestLifecycle.Companion.initialized();
 
     viewModel.counterLiveData().observe(testLifecycle, testObserver);
 
